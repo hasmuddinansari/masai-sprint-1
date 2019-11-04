@@ -1,0 +1,235 @@
+body {
+  background: #3e2723;
+  display: flex;
+  flex-direction: column;
+}
+.nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  flex-direction: row;
+  background: white;
+  margin-top: -8px;
+  box-shadow: 10px 5px 5px black;
+}
+#top {
+  margin-top: -105px;
+}
+.nav .icon img {
+  height: 100px;
+  width: 100px;
+  border-radius: 60%;
+}
+.nav h1 + img {
+  height: 100px;
+}
+
+.nav div + h1 {
+  margin-left: 50px;
+}
+.nav .direction {
+  width: 1050px;
+  height: 70px;
+}
+.nav .direction ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav .direction ul li {
+  margin: 10px;
+  background: black;
+  color: white;
+  padding: 10px;
+  list-style-type: none;
+  font-size: 18px;
+}
+.nav .direction ul li:hover {
+  background: lightblue;
+  color: black;
+  border-bottom: 5px solid black;
+}
+.background-img,
+.history {
+  height: 600px;
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+}
+
+.background-img {
+  background-image: url("https://images.unsplash.com/photo-1485313260896-6e6edf486858?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  font-size: 100px;
+  text-align: center;
+}
+.background-img p {
+  margin-top: 500px;
+  color: white;
+  box-shadow: 10px 4px 30px white;
+  font-weight: bold;
+  border: 1px solid black;
+  background: black;
+}
+.history h2 {
+  text-align: center;
+  border: 3px solid red;
+  box-shadow: 10px 15px 20px black;
+  border-radius: 10px 1px;
+  width: 100px;
+  padding: 10px;
+  height: 40px;
+}
+.history h2:hover {
+  background: red;
+  cursor: pointer;
+}
+.history {
+  height: 480px;
+
+  border: none;
+}
+
+.history h2,
+.history p {
+  margin: 20px 30px;
+}
+
+/* #rule of game */
+
+.rule {
+  height: 900px;
+}
+.rule h1 {
+  width: 100%;
+  height: 70px;
+  margin-top: 100px;
+  text-align: center;
+}
+.rule > h2 {
+  width: 200px;
+  height: 50px;
+  box-shadow: 10px 15px 20px black;
+}
+.rule ol li {
+  margin: 15px;
+}
+
+/* positioning */
+#position {
+  height: 130rem;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(2, 500px);
+  grid-template-rows: repeat(4, 200px 700px 500px 700px);
+}
+#position h1 {
+  grid-column: 1/3;
+  align-items: center;
+}
+#position img {
+  height: 600px;
+  background: white;
+  box-shadow: 10px 10px 30px black;
+}
+
+#position #pic2 {
+  height: 260px;
+}
+#position #pic3 {
+  height: 400px;
+  justify-self: center;
+}
+
+#position div ul li {
+  list-style-type: none;
+  margin-top: 10px;
+}
+#position div ul li:nth-child(odd) {
+  color: black;
+  background: red;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px black;
+  padding: 2px;
+}
+
+/* trophy */
+#trophies {
+  height: 165rem;
+}
+#trophies .trophy_table {
+  display: grid;
+  margin-left: 100px;
+  width: 80%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 50px);
+  row-gap: 30px;
+}
+#trophies .trophy_table div {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  height: 50px;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  background-image: linear-gradient(145deg, lightblue, white, darkgrey);
+}
+#trophies .trophy_table .box1 {
+  background: red;
+  color: white;
+  font-size: 24px;
+  height: 50px;
+  font-weight: bold;
+}
+#trophies h1 img {
+  height: 60px;
+}
+.nav .direction ul a:nth-child(1) #home,
+.nav .direction ul a:nth-child(2) #play,
+.nav .direction ul a:nth-child(3) #positioning,
+.nav .direction ul a:nth-child(4) #trophy {
+  background: green;
+  color: white;
+  border: 1px solid black;
+}
+.nav .direction ul a {
+  text-decoration: none;
+}
+/* media query */
+@media (max-width: 680px) {
+  .history {
+    margin-top: 120px;
+  }
+}
+@media (max-width: 928px) {
+  #position {
+    height: 130rem;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(1, 500px);
+    grid-template-rows: repeat(7, 200px 700px 700px 700px 700px 700px 700px);
+  }
+  #position h1 {
+    grid-column: 1/2;
+    align-items: center;
+  }
+  #position #pic2 {
+    order: 1;
+  }
+  #position #pic1 {
+    justify-self: center;
+  }
+}
+@media (max-width: 618px) {
+  #trophies #heading {
+    margin-top: 200px;
+  }
+  .trophy_table {
+    margin-top: 80px;
+  }
+}
